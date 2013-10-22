@@ -1,0 +1,15 @@
+```{r}
+toBase<-function(Z,b){
+  res<-c()
+  repeat {
+    r<-Z%%b
+    Z<-Z-r
+    res<-c(Z,res)
+    if (Z==0) break
+  }
+  return (res)
+}
+#toBase(10,2)
+#toBase(100,3)
+#toBase(100,16)
+```

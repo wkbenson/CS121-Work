@@ -1,0 +1,25 @@
+```{r}
+outlier<-function(x){
+  outliers=quantile(x,c(.25,.75))
+  farness=1.5*(outliers[2]-outliers[1])
+  return (c(x<(outliers[1]-farness) | x>(outliers[2]+farness)))
+}
+```
+
+```{r}
+english=c("one","two","three","four","five","six","seven","eight","nine","ten")
+spanish=c("uno","dos","tres","cuatro","cinco","seis","siete","ocho","nuave","diez")
+french=c("un","deux","trois","quatre","cinq","sex","sept","huit","neuf","dex")
+
+digitToWord<-function(x,language){
+  return (language[x])
+}
+```
+
+```{r}
+english=c("one","two","three","four","five","six","seven","eight","nine","ten")
+lettersMatch<-function(words,pattern){
+ containsPattern=c(grep(pattern,words))
+ for (n in containsPattern) print(containsPattern[n])   
+  }
+```
