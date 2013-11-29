@@ -1,0 +1,15 @@
+Calculus
+========================================================
+
+## Exercise I
+1. find $\frac{du}{dt}$ when $y=x^{13}$
+2. find $\frac{du}{dt}$ when $y=x^{2a}$
+3. find $\frac{du}{dt}$ when $y=x^{\frac{-5}{2}}$
+4. find $\frac{du}{dt}$ when $u=t^{2*4}$
+5. find $\frac{du}{dt}$ when $z=\sqrt[3]{u}$
+
+## Exercise XVII
+1. find $\int y dx$ when $y^{2}=4ax$
+2. find $\int \frac{3}{x^4} dx$
+3. find $\int \frac {1}{a} x^{3} dx$
+4. find $\int (x^{2}+a) dx$
