@@ -1,0 +1,53 @@
+```{r}
+outlier<-function(x){
+  outliers=quantile(x,c(.25,.75))
+  farness=1.5*(outliers[2]-outliers[1])
+  return (c(x<(outliers[1]-farness) | x>(outliers[2]+farness)))
+}
+outlier(c(1,4,4,7))
+outlier(c(1,25,25,25))
+```
+
+```{r}
+english=c("one","two","three","four","five","six","seven","eight","nine","ten")
+spanish=c("uno","dos","tres","cuatro","cinco","seis","siete","ocho","nuave","diez")
+french=c("un","deux","trois","quatre","cinq","sex","sept","huit","neuf","dex")
+
+digitToWord<-function(x,language){
+  return (language[x])
+}
+```
+
+```{r}
+english=c("one","two","three","four","five","six","seven","eight","nine","ten")
+lettersMatch<-function(words,pattern){
+ containsPattern=c(grep(pattern,words))
+ return(words[containsPattern])
+  }
+lettersMatch(english, "o")
+lettersMatch(english, "^...$") # three letters long
+lettersMatch(english, "^...ee") # fourth and fifth are the letter r
+```
+
+```{r}
+piSeries<-function(n){
+  x<-c()
+  for (n in 1:n) {
+    x<-c(x, (((-1)^(n-1))*(1+(2*(n-1)))))
+  }
+  return(sum(4*(1/(x))))
+}
+piSeries(600)
+```
+
+```{r}
+howCloseToPi<-function(n){
+  PiApproximations<-c()
+  for (p in 1:n){
+    series<-cumsum(piSeries(p))
+    PiApproximations<-c(PiApproximations,series)
+  }
+  plot(PiApproximations,pch=20, col=rgb(0,0,0,.4),log="x")
+}
+howCloseToPi(100)
+```

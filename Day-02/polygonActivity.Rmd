@@ -1,0 +1,12 @@
+
+```{r}
+#middle circle
+plot(c(0,10),c(0,10),type="n",xlim=c(0,100),ylim=c(0,100),asp=1)
+x<-cos(seq(0,(2*pi),by=.1))
+y<-sin(seq(0,(2*pi),by=.1))
+#polygon(50+(10*x),50+(10*y),col="light blue") #middle circle
+#polygon(40+(6*x),60+(12*y),col=rainbow(6)) #upper left oval
+#polygon(c(35,35,45,45),c(57,47,47,57),col=cm.colors(11)) #big square
+points(c(65,60,70,65-(10*cos(.3*pi))),c(65,65-(5/tan(pi/10)),65-(5/tan(pi/10)),65-10*sin(.3*pi)))
+```
+

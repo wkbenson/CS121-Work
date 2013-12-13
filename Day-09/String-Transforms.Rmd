@@ -1,0 +1,49 @@
+#Oct 1, 2013
+
+## Reverser
+
+```{r}
+reverser<-function(x){
+  seperate = strsplit(as.character(x),split=character(0))
+  seperate[[1]][nchar(x):1]
+}
+  
+```
+#test
+```{r}
+reverser("walter")
+reverser("reverser")
+ 
+```
+
+```{r}
+scrambler<-function(x){
+  seperate = strsplit(as.character(x),split=character(0))
+  randSeq = sample(1:nchar(x))
+  seperate[[1]][randSeq[1:length(randSeq)]]
+}
+```
+#test
+```{r}
+scrambler("walter")
+scrambler("tomatoe")
+```
+
+```{r}
+vowelBleeper<-function(x){
+  seperate = strsplit(as.character(x),split=character(0))
+  res<-chartr("aeiou","*****",seperate[[1]])
+  return(res)
+}
+vowelBleeper("walter")
+```
+
+```{r}
+l33t<-function(x){
+  seperate = strsplit(as.character(x),split=character(0))
+  res<-chartr("eosg","3059",seperate[[1]])
+  return(res)
+  }
+l33t("walter")
+```
+
